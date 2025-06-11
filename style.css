@@ -12,19 +12,19 @@
             padding: 2rem 1rem;
             box-sizing: border-box;
         }
-        .foto-unica {
+        .onepiece.png {
             max-width: 100%;
             text-align: center;
             margin: 20px auto;
         }
 
-        .foto-unica img {
+        .onepiece.png img {
         max-width: 90%;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
 
-        .foto-unica figcaption {
+        .onepiece.pnga figcaption {
         margin-top: 10px;
         font-style: italic;
         color: #555;
