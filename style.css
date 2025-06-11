@@ -68,7 +68,6 @@
             color: #ff4081; /* Rosa mais escuro */
             text-align: center;
             margin-top: 1.5rem;
-            animation: pulse 2s infinite ease-in-out;
         }
 
         @keyframes pulse {
