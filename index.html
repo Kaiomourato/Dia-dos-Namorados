@@ -14,28 +14,23 @@
   <div class="container">
    <!-- Cabeçalho Principal -->
    <header>
-    <h1 class="text-white text-center" style="font-family: 'Dancing Script', 'Great Vibes', cursive;">
-     Para o Meu Amor Eterno ❤️
-    </h1>
-    <p class="text-white text-lg mt-4 px-4">
-     Meu amor, este site é um pequeno pedaço do meu coração, feito para celebrar cada momento da nossa linda história. Feliz Dia dos Namorados!
-    </p>
-   </header>
-   <!-- Seção da Contagem de Tempo -->
-   <section class="section-padding">
-    <p class="text-center text-lg mt-4">
-     Lembro-me como se fosse hoje do dia em que tudo começou, quando respondeu aquela primeira mensagem no Instagram. Desde então, o tempo voa ao seu lado.
-    </p>
-    <div class="mt-8" id="countdown-timer">
-     Calculando...
-    </div>
-    <h2 class="text-center">
-     Desde a Nossa Primeira Mensagem...
-    </h2>
-    <p class="text-center text-sm text-gray-500 mt-4">
-     (Atualizado em tempo real, só para você saber o quanto nosso amor cresce a cada segundo!)
-    </p>
-   </section>
+  <h1 class="main-title">
+    Para o Meu Amor Eterno ❤️
+  </h1>
+  <p class="subtitle">
+    Meu amor, este site é um pequeno pedaço do meu coração, feito para celebrar cada momento da nossa linda história. Feliz Dia dos Namorados!
+  </p>
+</header>
+<!-- Seção da Contagem de Tempo -->
+<section class="section-padding">
+  <h2 class="text-center">
+    Desde a Nossa Primeira Mensagem...
+  </h2>
+  <div id="countdown-timer" class="countdown-timer"></div>
+  <p class="text-center text-sm text-gray-500 mt-4">
+    (Atualizado em tempo real, só para você saber o quanto nosso amor cresce a cada segundo!)
+  </p>
+</section>
    <!-- Seção Nossa História -->
    <section class="section-padding">
     <h2 class="text-center">
@@ -112,27 +107,23 @@
             const now = new Date().getTime();
             const timeElapsed = now - startDate.getTime();
 
-            // Evita contagem negativa se a data for no futuro (embora não deva ser o caso aqui)
             if (timeElapsed < 0) {
                 document.getElementById('countdown-timer').innerHTML = "Ainda não chegou a data!";
                 return;
             }
 
             const seconds = Math.floor(timeElapsed / 1000);
-            const minutes = Math.floor(seconds / 60);
-            const hours = Math.floor(minutes / 60);
+            const hours = Math.floor(seconds / 3600);
             const days = Math.floor(hours / 24);
-            const months = Math.floor(days / 30.44); // Média de dias por mês
-            const years = Math.floor(days / 365.25); // Média de dias por ano (considerando anos bissextos)
 
             const displaySeconds = seconds % 60;
-            const displayMinutes = minutes % 60;
             const displayHours = hours % 24;
-            const displayDays = days % 30.44 >= 0 ? Math.floor(days % 30.44) : 0; // Dias restantes no mês
-            const displayMonths = months % 12 >= 0 ? Math.floor(months % 12) : 0; // Meses restantes no ano
+            const displayDays = days;
 
             document.getElementById('countdown-timer').innerHTML =
-                `${years} anos, ${displayMonths} meses, ${displayDays} dias, ${displayHours} horas, ${displayMinutes} minutos, ${displaySeconds} segundos`;
+                `<span>${displayDays} dias</span>
+                 <span>${displayHours} horas</span>
+                 <span>${displaySeconds} segundos</span>`;
         }
 
         // Atualiza a contagem a cada segundo
