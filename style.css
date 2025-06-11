@@ -12,23 +12,29 @@
             padding: 2rem 1rem;
             box-sizing: border-box;
         }
-        .onepiece.png {
-            max-width: 100%;
+                    /* Estilo para imagem única com legenda */
+            .onepiece {
             text-align: center;
             margin: 20px auto;
-        }
+            padding: 10px;
+            }
 
-        .onepiece.png img {
-        max-width: 90%;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
+            .onepiece img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
 
-        .onepiece.pnga figcaption {
-        margin-top: 10px;
-        font-style: italic;
-        color: #555;
-        }
+            .onepiece figcaption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+            font-size: 0.95rem;
+            }
+
+            
+
 
 
         .container {
