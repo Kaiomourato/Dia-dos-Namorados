@@ -70,12 +70,6 @@
             margin-top: 1.5rem;
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
         
         /* Estilo para o carrossel de fotos */
         .carousel-container {
