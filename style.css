@@ -12,6 +12,24 @@
             padding: 2rem 1rem;
             box-sizing: border-box;
         }
+        .foto-unica {
+            max-width: 100%;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .foto-unica img {
+        max-width: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .foto-unica figcaption {
+        margin-top: 10px;
+        font-style: italic;
+        color: #555;
+        }
+
 
         .container {
             max-width: 960px;
